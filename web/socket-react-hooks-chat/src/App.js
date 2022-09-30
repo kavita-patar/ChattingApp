@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="chartroom/:roomName" element={<ChatRoom />} />
+          <Route path="chatroom/:roomId" element={<ChatRoom />} />
         </Routes>
       </BrowserRouter>
     </div>

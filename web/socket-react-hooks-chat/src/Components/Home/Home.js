@@ -18,7 +18,7 @@ function Home() {
         onChange={handleRoomNameChange}
         className="text-input-field"
       />
-      <Link to={`/${roomName}`} className="enter-room-button">
+      <Link to={`/chatroom/${roomName}`} className="enter-room-button">
         Join Room
       </Link>
     </div>
