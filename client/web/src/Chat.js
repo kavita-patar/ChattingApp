@@ -6,7 +6,6 @@ function Chat({ socket, username, room }) {
   const [messageList, setMessageList] = useState([]);
 
   const sendMessage = async () => {
-    console.log("inside...");
     if (currentMessage !== "") {
       const messageData = {
         room: room,
@@ -25,11 +24,7 @@ function Chat({ socket, username, room }) {
   };
 
   useEffect(() => {
-    console.log("the messages are..",messageList);
-  }, [messageList])
-
-  useEffect(() => {
-    socket.on("receive_message", (data) => {
+    socket.off("receive_message").on("receive_message", (data) => {
       setMessageList((list) => [...list, data]);
     });
   }, [socket]);
