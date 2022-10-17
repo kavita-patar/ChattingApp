@@ -2,6 +2,8 @@
 App Based Projects for Chatting
 
 
+![Demo](/Documentation/demo.png)
+
 ## Server Setup
 1. Initialize the server's package.json
 
